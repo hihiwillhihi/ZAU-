@@ -204,6 +204,10 @@
     const outputDiv = document.getElementById('output');
     const apiToken = 'e421959a7daa469a09abe75fdc48efea9e92a91e9cab4e2643e879a3b5c4140587b8b16db6f9ae0d84418414ec522555';
 
+    const transitionMap = {
+      "OHARE9": "Radar vectors"
+    };
+
     // Fetch full airport name on input blur
     airportInput.addEventListener('blur', () => {
       const icao = airportInput.value.toUpperCase();
@@ -231,6 +235,8 @@
         const rdrv = document.getElementById('rdrv').value;
         const callsign = document.getElementById('callsign').value;
         const station = document.getElementById('station').value;
+
+        const transitionFull = transitionMap[transition] || transition;
         
         outputDiv.textContent =
      `${callsign}, Chicago ${station} Cleared to ${airport}
