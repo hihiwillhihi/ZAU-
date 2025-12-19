@@ -232,11 +232,9 @@
         const callsign = document.getElementById('callsign').value;
         const station = document.getElementById('station').value;
         
-        const transitionFull = transitionMap[transition] || transition;
-        
         outputDiv.textContent =
      /`${callsign}, Chicago ${station} Cleared to ${airport}
-      ${sid} departure, ${transitionFull} ${rdrv}, then as filed
+      ${sid} departure, ${transition} ${rdrv}, then as filed
       Climb via SID except maintain ${climb} expect Flight Level ${altitude} 10 minutes after departure
       Departure frequency ${depFreq}
       Squawk ${squawk}`;
